@@ -4,7 +4,8 @@
   "description": "The project aims to develop a backend API using TypeScript and Express for processing images uploaded by users",
   "main": "server.ts",
   "scripts": {
-    "start": "tsc && node dist/server.js",
+    "build": "tsc",
+    "start": "node ./dist/server.js",
     "serve": "tsc && nodemon --watch ts-node src/server.ts"
   },
   "author": "Amer Hallaq",
