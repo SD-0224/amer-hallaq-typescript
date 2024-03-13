@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    
+}
+
+.form-upload {
+
+    width: 50%;
+    margin: 50px auto;
+}
+
+.margin-up {
+    margin-top: 50px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.note {
+
+    font-size: 0.5em;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.bg-clr {
+    background-color: #F2FFE9;
+}

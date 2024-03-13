@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/styles.css">
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700&display=swap" rel="stylesheet">
+        <title>Image Processing API</title>
+    </head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Image Processing API</a>
+        </div>
+      </nav>
+    <main>
+        <form class="form-upload" action="/upload" method="post" enctype="multipart/form-data">
+            <div class="input-group">
+                <input type="file" name="image" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                <button class="btn btn-outline-secondary" type="submit" id="inputGroupFileAddon04">Upload</button>
+            </div>
+        </form>
+        <section class="files">
+          <h3 class="mb-4 ms-4">List of your images: <span class="note">( Click on image to process it )</span></h3>
+          <section class="card-deck d-flex justify-content-start flex-wrap ms-2">
+              <% images.forEach(function(image) { %>
+                <article class="card mb-2 ms-2" style="width: 18rem;">
+                  <a href="/process/<%= image %>"><img class="card-img-top" src="../uploads/<%= image %>" alt="image" height="250"></a>
+                </article>
+              <% }); %>
+          </ul>
+        </section>
+    </main>
+</body>
+</html>
