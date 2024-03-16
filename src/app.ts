@@ -26,18 +26,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-// app.get('/', (req: Request, res: Response) => {
-//     console.log("222")
-//     res.render('index');;
-// });
-
 //use routes in the routes folder
 app.use(imageRoutes);
 
-//If route does not exist
+//If route does not exist, redirect to the root
 app.use((req:Request,res:Response,err:any) => {
     console.log(err)
-    res.status(404).render('404', { title: '404'});
+    res.redirect('/')
 });
 
 export default app;
