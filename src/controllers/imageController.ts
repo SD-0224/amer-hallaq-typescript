@@ -76,8 +76,8 @@ const cropImage = (req:Request,res:Response) => {
     })
 
     .catch(error => {
-        console.log("error")
-        res.send({message:error})
+        errorHandler(error,res);
+        
     })
     
 }
@@ -92,7 +92,7 @@ const downloadImage = (req:Request,res:Response) => {
 
     res.download(imagePath, (err) => {
         if(err) {
-            console.log(err)
+            errorHandler(err,res);
         }
     });
 }
